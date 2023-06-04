@@ -147,9 +147,13 @@ function articleMaker({
   articleTitle.textContent = title;
   articleDate.textContent = date;
   firstPara.textContent = firstParagraph;
-  secondPara.textContent = secondParagraph
-  thirdPara.textContent = thirdParagraph
-  
+  secondPara.textContent = secondParagraph;
+  thirdPara.textContent = thirdParagraph;
+  articleBtn.textContent = "+";
+
+  articleBtn.addEventListener("click", () => {
+    article.classList.toggle("article-open");
+  });
 
   return article;
 }
