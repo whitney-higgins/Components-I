@@ -158,11 +158,10 @@ function articleMaker({
   return article;
 }
 
-const testPanel = articleMaker({
-  title: "test",
-  date: "test",
-  firstParagraph: "testing",
-  secondParagraph: "testing",
-  thirdParagraph: "testing",
+const addArticles = data.map((articleObject) => {
+  return articleMaker(articleObject);
 });
-articles.appendChild(testPanel);
+
+addArticles.forEach((articleElement) => {
+  articles.appendChild(articleElement);
+});
